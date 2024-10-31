@@ -1,0 +1,44 @@
+.avatar-container {
+    text-align: center;
+}
+.file-upload-label {
+    margin-top: 10px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main {
+    height: 100%;
+}
+
+button{
+ color: white;
+ background-color: #43A941; 
+ margin-top: 20px; 
+ margin-bottom: 20px; 
+ text-align: center; 
+ padding: 5px 20px;
+ font-size: 15px; 
+}
+
+.logout-button {
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #43A941;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 5px 25px;
+    text-align: center;
+}
+
+td button {
+    margin: 0;
+}

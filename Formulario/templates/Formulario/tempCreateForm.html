@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Form</title>
+</head>
+<style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      background-color: #34C759;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+ 
+      </style>
+<body>
+    <div style="padding: 10px; background-color: #f0f0f0;">
+
+    <h1>Create Form</h1>
+    <form id="createForm" action="{% url 'Formulario:createForm' %}" method="POST">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        
+        <label for="start_date">Start Date:</label><br>
+        <input type="date" id="start_date" name="start_date"><br>
+        
+        <label for="end_date">End Date:</label><br>
+        <input type="date" id="end_date" name="end_date"><br>
+        
+        
+        <!-- Campo oculto para los correos de los empleados -->
+        <input type="hidden" id="employeeEmails" name="employee_emails">
+
+        <input type="submit" value="Create Form">
+    </form>
+    
+    
+    <form id="emailForm" action="#" method="POST">
+        <label for="newEmail">Add Email:</label><br>
+        <input type="email" id="newEmail" name="newEmail"><br>
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="emailList"></div>
+
+    <!-- Script for handling email list and debugging -->
+    <script>
+        document.getElementById('createForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Obtiene los correos de los empleados desde la lista en el frontend
+            var emailsList = document.getElementById('emailList').getElementsByTagName('li');
+            var emailsArray = [];
+
+            for (var i = 0; i < emailsList.length; i++) {
+                emailsArray.push(emailsList[i].textContent);
+            }
+
+            // Agrega los correos al campo oculto del formulario
+            var employeeEmailsInput = document.getElementById('employeeEmails');
+            employeeEmailsInput.value = JSON.stringify(emailsArray);
+
+            // Envía el formulario al backend
+            this.submit();
+        });
+
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Get the value of the new email field
+            var newEmailInput = document.getElementById('newEmail');
+            var newEmail = newEmailInput.value.trim();
+
+            // Add the new email to the list
+            var emailList = document.getElementById('emailList');
+            var newListItem = document.createElement('li');
+            newListItem.textContent = newEmail;
+            emailList.appendChild(newListItem);
+
+            // Clear the new email field after adding to the list
+            newEmailInput.value = '';
+        });
+
+        document.getElementById('debugButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            var title = document.getElementById('title').value;
+            var startDate = document.getElementById('start_date').value;
+            var endDate = document.getElementById('end_date').value;
+            var sections = document.querySelectorAll('input[name="selected_sections[]"]:checked');
+            var selectedSections = Array.from(sections).map(function(section) {
+                return section.value;
+            });
+            var emailsList = document.getElementById('emailList').getElementsByTagName('li');
+            var emailsArray = [];
+
+            for (var i = 0; i < emailsList.length; i++) {
+                emailsArray.push(emailsList[i].textContent);
+            }
+
+            console.log("Debug Info:");
+            console.log("Title:", title);
+            console.log("Start Date:", startDate);
+            console.log("End Date:", endDate);
+            console.log("Selected Sections:", selectedSections);
+            console.log("Employee Emails:", emailsArray);
+        });
+    </script>
+</body>
+</html>

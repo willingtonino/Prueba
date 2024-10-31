@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>ADAP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous" />
+    <link rel="icon" href="">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/main.css' %}"> 
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/registercompany.css' %}"> 
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="banner col-md-4">
+            </div>
+            <div class="col-md-8 d-flex flex-column align-items-center">
+                <img src="{% static 'Inicio_sesion/images/LogoU.png' %}" alt="LogoU">
+                <div class="flags-container" id="flags">
+                    <div class="flag" data-language="es">
+                      <img src="{% static 'Inicio_sesion/images/flag.png' %}" alt="" class="rounded">
+                    </div>
+                    <div class="flag" data-language="en">
+                      <img src="{% static 'Inicio_sesion/images/united-kingdom.png' %}" class="rounded" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-container col d-flex justify-content-space-between">
+                        <p class="advice-text text-shadow" data-section="FSign" data-value="Registro2">Are you not a company? You can register as a user: </p>
+                        <a href="{% url 'Inicio_sesion:signup' %}" data-section="Fsign" data-value="registroc">Here</a> 
+                    </div>
+                </div>    
+                <div class="form-row row">
+                    <div class="form-container container">
+                        <form method="post">
+                            {{ error_message }}
+                            {% csrf_token %}
+                            <div class="form text-start">
+                                <label for="companyName" class="form-label" data-section="FSign" data-value="CName">Company Name </label>
+                                <input type="text" id="companyName" class="form-control" name="companyName" placeholder="" required>         
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="dateFoundation" class="form-label" data-section="FSign" data-value="Date of fundation">Date of Foundation</label>
+                                <input type="date" lang="es" id="dateFoundation" class="form-control" name="dateFoundation" placeholder="">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="email" class="form-label" data-section="FSign" data-value="E-mail">Email </label>
+                                <input type="email" id="email" class="form-control" name="email" placeholder="" required>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="phone" class="form-label" data-section="FSign" data-value="Phone">Phone </label>
+                                <input type="text" id="phone" class="form-control" name="phone" placeholder="" required>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="NIT" class="form-label" data-section="FSign" data-value="NIT">NIT </label>
+                                <input type="text" id="NIT" class="form-control" name="NIT" placeholder="" required>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="country" class="form-label" data-section="FSign" data-value="Country of Residence">Country of Residence</label>
+                                    <select id="country" class="form-select" name="country" required>
+                                        <option value="" disabled selected>Select your country of residence</option>
+                                        <option value="Afghanistan">Afghanistan</option>
+                                        <option value="Albania">Albania</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Algeria">Algeria</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Benin">Benin</option>
+                                        <option value="Bolivia">Bolivia</option>
+                                        <option value="Botswana">Botswana</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Cameroon">Cameroon</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Czech Republic">Czech Republic</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="China">China</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Congo">Congo</option>
+                                        <option value="Costa Rica">Costa Rica</option>
+                                        <option value="Croatia">Croatia</option>
+                                        <option value="Cuba">Cuba</option>
+                                        <option value="Denmark">Denmark</option>
+                                        <option value="Ecuador">Ecuador</option>
+                                        <option value="Egypt">Egypt</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Slovakia">Slovakia</option>
+                                        <option value="Slovenia">Slovenia</option>
+                                        <option value="Ethiopia">Ethiopia</option>
+                                        <option value="Philippines">Philippines</option>
+                                        <option value="Finland">Finland</option>
+                                        <option value="France">France</option>
+                                        <option value="Greece">Greece</option>
+                                        <option value="Guyana">Guyana</option>
+                                        <option value="Netherlands">Netherlands</option>
+                                        <option value="Honduras">Honduras</option>
+                                        <option value="Hungary">Hungary</option>
+                                        <option value="India">India</option>
+                                        <option value="Iran">Iran</option>
+                                        <option value="Iraq">Iraq</option>
+                                        <option value="Ireland">Ireland</option>
+                                        <option value="Iceland">Iceland</option>
+                                        <option value="Israel">Israel</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Jamaica">Jamaica</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Kenya">Kenya</option>
+                                        <option value="Latvia">Latvia</option>
+                                        <option value="Lebanon">Lebanon</option>
+                                        <option value="Lithuania">Lithuania</option>
+                                        <option value="Macedonia">Macedonia</option>
+                                        <option value="Malta">Malta</option>
+                                        <option value="Morocco">Morocco</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="Monaco">Monaco</option>
+                                        <option value="Mongolia">Mongolia</option>
+                                        <option value="Nepal">Nepal</option>
+                                        <option value="New Zealand">New Zealand</option>
+                                        <option value="Nicaragua">Nicaragua</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="North Korea">North Korea</option>
+                                        <option value="Norway">Norway</option>
+                                        <option value="Panama">Panama</option>
+                                        <option value="Paraguay">Paraguay</option>
+                                        <option value="Peru">Peru</option>
+                                        <option value="Poland">Poland</option>
+                                        <option value="Portugal">Portugal</option>
+                                        <option value="Puerto Rico">Puerto Rico</option>
+                                        <option value="Romania">Romania</option>
+                                        <option value="Russia">Russia</option>
+                                        <option value="El Salvador">El Salvador</option>
+                                        <option value="Serbia">Serbia</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Syria">Syria</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="Sweden">Sweden</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Suriname">Suriname</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="Uruguay">Uruguay</option>
+                                        <option value="Venezuela">Venezuela</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Yemen">Yemen</option>
+                                        <option value="Zimbabwe">Zimbabwe</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="password" class="form-label" data-section="FSign" data-value="Password">Password</label>
+                                <input type="password" id="password" class="form-control" name="password" placeholder="" required>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <input class="form-check-control" type="checkbox" value="" id="" required>
+                                <label class="form-check-label"data-section="FSign" data-value="Conditions" for="">I have read and accept the Terms and Conditions</label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input class="form__button" type="submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'Inicio_sesion/js/language.js' %}"></script>
+</body>
+</html>

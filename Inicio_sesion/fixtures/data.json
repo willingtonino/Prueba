@@ -1,0 +1,105 @@
+[
+    {
+        "model": "Inicio_sesion.company",
+        "pk": 1,
+        "fields": {
+            "companyName": "Company Test 1",
+            "foundationDate": "2020-01-01",
+            "email": "company1@example.com",
+            "NIT": "1111111111",
+            "phone": "1234567890",
+            "country": "Country 1",
+            "password": "hashed_password_1"
+        }
+    },
+    {
+        "model": "Inicio_sesion.company",
+        "pk": 2,
+        "fields": {
+            "companyName": "Company Test 2",
+            "foundationDate": "2020-01-02",
+            "email": "company2@example.com",
+            "NIT": "2222222222",
+            "phone": "0987654321",
+            "country": "Country 2",
+            "password": "hashed_password_2"
+        }
+    },
+    {
+        "model": "Inicio_sesion.customuser",
+        "pk": 1,
+        "fields": {
+            "first_name": "Employee",
+            "last_name": "One",
+            "identification": "11111111A",
+            "gender": "M",
+            "nationality": "Country 1",
+            "country": "Country 1",
+            "birthday": "1990-01-01",
+            "email": "employee1@example.com",
+            "company": 1,
+            "position": "Manager",
+            "phone": "111111111",
+            "is_entrepreneur": false,
+            "password": "hashed_password_3"
+        }
+    },
+    {
+        "model": "Inicio_sesion.customuser",
+        "pk": 2,
+        "fields": {
+            "first_name": "Employee",
+            "last_name": "Two",
+            "identification": "22222222B",
+            "gender": "F",
+            "nationality": "Country 1",
+            "country": "Country 1",
+            "birthday": "1995-05-05",
+            "email": "employee2@example.com",
+            "company": 1,
+            "position": "Engineer",
+            "phone": "222222222",
+            "is_entrepreneur": true,
+            "entrepreneurship": "Startup 1",
+            "password": "hashed_password_4"
+        }
+    },
+    {
+        "model": "Inicio_sesion.customuser",
+        "pk": 3,
+        "fields": {
+            "first_name": "Employee",
+            "last_name": "Three",
+            "identification": "33333333C",
+            "gender": "M",
+            "nationality": "Country 2",
+            "country": "Country 2",
+            "birthday": "1985-12-12",
+            "email": "employee3@example.com",
+            "company": 2,
+            "position": "Analyst",
+            "phone": "333333333",
+            "is_entrepreneur": false,
+            "password": "hashed_password_5"
+        }
+    },
+    {
+        "model": "Inicio_sesion.customuser",
+        "pk": 4,
+        "fields": {
+            "first_name": "Employee",
+            "last_name": "Four",
+            "identification": "44444444D",
+            "gender": "O",
+            "nationality": "Country 2",
+            "country": "Country 2",
+            "birthday": "1980-08-08",
+            "email": "employee4@example.com",
+            "company": 2,
+            "position": "Technician",
+            "phone": "444444444",
+            "is_entrepreneur": false,
+            "password": "hashed_password_6"
+        }
+    }
+]

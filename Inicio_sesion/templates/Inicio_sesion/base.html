@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADAP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold">ADAP</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="{% url 'Inicio_sesion:signin' %}" class="hover:text-green-200 transition-colors"> Login</a>
+                    <a href="{% url 'Inicio_sesion:password_reset' %}" class="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-green-100 transition-colors">Reset Password</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div class="w-full max-w-md bg-green-50 rounded-lg shadow-lg min-h-[400px] flex flex-col">
+            <div class="p-8 flex-grow">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="text-center">
+                <p> Universidad Ean. Proyecto Adap.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

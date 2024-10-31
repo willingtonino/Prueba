@@ -1,0 +1,50 @@
+/* Layout */
+.main {
+  height: 100vh;
+}
+
+.main__row {
+  height: 100%;
+}
+
+/* Form styles */
+
+.form__title {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  width: 55%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Translation flags */
+
+.flags-container {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.flag {
+  display: inline-block;
+}
+
+.flag > img {
+  display: inline-block;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* Link */
+.link {
+  color: #212529;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #13aa52;
+  text-decoration: underline;
+}

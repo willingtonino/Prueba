@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login ADAP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    {% comment %} bootstrap {% endcomment %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="icon" href="" />
+    {% load static %} 
+    {% comment %} Styles {% endcomment %}    
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/login.css' %}" />
+  </head>
+  <body>
+    
+    <main class="main container-fluid">
+      <div class="main__row row">
+        {% comment %} Banner {% endcomment %}
+        <div class="banner col-md-4"></div>
+        {% comment %} Form container {% endcomment %}
+        <div
+          class="form-container col-md-8 d-flex flex-column align-items-center justify-content-sm-center"
+        >
+          {% comment %} Logo {% endcomment %}
+          <div class="row">
+            <img
+              src="{% static 'Inicio_sesion/images/LogoU.png' %}"
+              alt="LogoU"
+            />
+          </div>
+          <div class="form-row row">
+            <div class="col">
+              {% comment %} Login form {% endcomment %}
+              <form class="form" method="post">
+                {{ error_message }} {% csrf_token %}
+                <h2
+                  class="form__title text-shadow text-center"
+                  data-section="form"
+                  data-value="title"
+                >
+                  Log In
+                </h2>
+                <div class="input-group text-start">
+                  <span class="input-group-text"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    data-section="placeholder"
+                    data-value="email"
+                    placeholder="Email"
+                    name="email"
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fas fa-lock icon"></i
+                  ></span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    data-section="placeholder"
+                    data-value="password"
+                    placeholder="Password"
+                    name="password"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <input
+                    class="form__button"
+                    data-section="form"
+                    data-value="submit-btn"
+                    type="submit"
+                    value="Log In"
+                  />
+                </div>
+              </form>
+              <div class="links-container row justify-content-center mt-3">
+                <div class="col-md-6 text-center">
+                  <a
+                    class="link"
+                    href="{% url 'Inicio_sesion:password_reset' %}"
+                    data-section="links"
+                    data-value="forgot-password"
+                    >Forgot Password?</a
+                  >
+                </div>
+                <div class="col-md-6 text-center">
+                  {% csrf_token %}
+                  <a
+                    class="link"
+                    href="{% url 'Inicio_sesion:signup' %}"
+                    data-section="links"
+                    data-value="create-account"
+                    >Create an account</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flags-container" id="flags">
+            <div class="flag" data-language="es">
+              <img
+                src="{% static 'Inicio_sesion/images/flag.png' %}"
+                alt=""
+                class="rounded"
+              />
+            </div>
+            <div class="flag" data-language="en">
+              <img
+                src="{% static 'Inicio_sesion/images/united-kingdom.png' %}"
+                class="rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'Inicio_sesion/js/language.js' %}"></script>
+  </body>
+</html>

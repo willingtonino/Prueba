@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Creado Exitosamente</title>
+</head>
+<body>
+    <h1>Formulario Creado Exitosamente</h1>
+    <div>
+        <p><strong>Título:</strong> {{ form.title }}</p>
+        <p><strong>Fecha de Inicio:</strong> {{ form.start_date }}</p>
+        <p><strong>Fecha de Fin:</strong> {{ form.end_date }}</p>
+        <p><strong>Secciones Seleccionadas:</strong></p>
+        <ul>
+            {% for section in form.sections.all %}
+                <li>{{ section.name }}</li>
+            {% endfor %}
+        </ul>  
+        <p>Lista de empleados autorizados:</p>
+        <ul>
+            {% for employee in form.authorized_employees.all %}
+                <li>{{ employee.first_name }} {{ employee.last_name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

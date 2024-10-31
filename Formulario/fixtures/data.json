@@ -1,0 +1,443 @@
+[
+  {
+    "model": "Formulario.section",
+    "pk": 1,
+    "fields": {
+      "name": "Desempeño Contextual"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 2,
+    "fields": {
+      "name": "Desempeño Contraproducente"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 3,
+    "fields": {
+      "name": "Desempeño de Tarea"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 4,
+    "fields": {
+      "name": "Estrategias de Comportamiento"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 5,
+    "fields": {
+      "name": "Estrategias de Pensamiento Constructivo"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 6,
+    "fields": {
+      "name": "Estrategias de Pensamiento de Recompensa"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 7,
+    "fields": {
+      "name": "Autoliderazgo"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 8,
+    "fields": {
+      "name": "Desempeño"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 9,
+    "fields": {
+      "name": "Objetivos valores"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 10,
+    "fields": {
+      "name": "Ayuda problema"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 11,
+    "fields": {
+      "name": "Soporte trabajo"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 12,
+    "fields": {
+      "name": "Trabajo interesante"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 13,
+    "fields": {
+      "name": "Mis opiniones"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 14,
+    "fields": {
+      "name": "Aumento Salario"
+    }
+  },
+  {
+    "model": "Formulario.section",
+    "pk": 15,
+    "fields": {
+      "name": "Apoyo Organizacional"
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 1,
+    "fields": {
+      "description": "En los últimos tres meses asumí responsabilidades adicionales",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 2,
+    "fields": {
+      "description": "En los últimos tres meses yo mismo comencé nuevas tareas, cuando terminé las anteriores",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 3,
+    "fields": {
+      "description": "En los últimos tres meses asumí una tarea de trabajo desafiante, cuando estaba disponible",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 4,
+    "fields": {
+      "description": "En los últimos tres meses trabajé para mantener actualizado mi conocimiento laboral",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 5,
+    "fields": {
+      "description": "En los últimos tres meses trabajé para mantener mis habilidades laborales actualizadas",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 6,
+    "fields": {
+      "description": "En los últimos tres meses se me ocurrieron soluciones creativas para nuevos problemas",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 7,
+    "fields": {
+      "description": "En los últimos tres meses seguí buscando nuevos retos para mi trabajo",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 8,
+    "fields": {
+      "description": "En los últimos tres meses participe activamente en reuniones de trabajo",
+      "section": 1
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 9,
+    "fields": {
+      "description": "En los últimos tres meses me quejé de asuntos sin importancia en el trabajo",
+      "section": 2
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 10,
+    "fields": {
+      "description": "En los últimos tres meses hice los problemas mas grandes de lo que estaban",
+      "section": 2
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 11,
+    "fields": {
+      "description": "En los últimos tres meses me concentre en los aspectos negativos de una situación laboral, en lugar de en los aspectos positivos",
+      "section": 2
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 12,
+    "fields": {
+      "description": "En los últimos tres meses hablé con colegas sobre los aspectos negativos de mi trabajo",
+      "section": 2
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 13,
+    "fields": {
+      "description": "En los últimos tres meses hablé con personas ajenas a la organización sobre los aspectos negativos de mi trabajo",
+      "section": 2
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 14,
+    "fields": {
+      "description": "En los últimos tres meses me las arreglé para planificar mi trabajo para que se hiciera a tiempo",
+      "section": 3
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 15,
+    "fields": {
+      "description": "En los últimos tres meses mi planeación fue óptima",
+      "section": 3
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 16,
+    "fields": {
+      "description": "En los últimos tres meses tuve la oportunidad de priorizar los problemas principales de los secundarios",
+      "section": 3
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 17,
+    "fields": {
+      "description": "En los últimos tres meses pude realizar bien mi trabajo con un mínimo de tiempo y esfuerzo",
+      "section": 3
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 18,
+    "fields": {
+      "description": "Escribo metas específicas para mi propio desempeño",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 19,
+    "fields": {
+      "description": "Establezco metas específicas para mi propio desempeño",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 20,
+    "fields": {
+      "description": "Pienso en las metas que pretendo alcanzar en el futuro",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 21,
+    "fields": {
+      "description": "Trabajo hacia metas específicas que me he fijado",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 22,
+    "fields": {
+      "description": "Cuando he completado con éxito una tarea, a menudo me recompenso con algo que me gusta",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 23,
+    "fields": {
+      "description": "Tiendo a ser duro conmigo mismo en mi forma de pensar , cuando no he hecho bien una tarea",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 24,
+    "fields": {
+      "description": "Me aseguro de hacer un seguimiento de lo bien que me está yendo en el trabajo/ (estudio)",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 25,
+    "fields": {
+      "description": "Utilizo notas escritas para recordarme a mí mismo lo que necesito lograr",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 26,
+    "fields": {
+      "description": "Utilizo recordatorios concretos (Ej., Notas y listas) para ayudarme a concentrarme en las cosas que necesito lograr",
+      "section": 4
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 27,
+    "fields": {
+      "description": "Me visualizo realizando una tarea con éxito antes de realizarla",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 28,
+    "fields": {
+      "description": "Me visualizo a propósito superando los desafíos que enfrento",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 29,
+    "fields": {
+      "description": "Pienso en mis propias creencias y suposiciones cada vez que encuentro una situación difícil",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 30,
+    "fields": {
+      "description": "Cuando me encuentro en situaciones difíciles, a veces hablo conmigo mismo (en voz alta o mentalmente) para ayudarme a superarlo",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 31,
+    "fields": {
+      "description": "Expreso y evalúo abiertamente mis propias suposiciones cuando tengo un desacuerdo con otra persona",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 32,
+    "fields": {
+      "description": "Pienso y evalúo las creencias y suposiciones que tengo",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 33,
+    "fields": {
+      "description": "Pienso en mis propias creencias y suposiciones cada vez que encuentro una situacion dificil",
+      "section": 5
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 34,
+    "fields": {
+      "description": "Intento rodearme de los objetos y las personas que resaltan mis comportamientos deseables",
+      "section": 6
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 35,
+    "fields": {
+      "description": "Cuando tengo una opción, trato de hacer mi trabajo de la manera que disfruto, en lugar de tratar simplemente de superarlo",
+      "section": 6
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 36,
+    "fields": {
+      "description": "Busco actividades en mi trabajo que disfruto hacer",
+      "section": 6
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 37,
+    "fields": {
+      "description": "La organización tienen en cuenta mis objetivos y valores",
+      "section": 9
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 38,
+    "fields": {
+      "description": "Tengo ayuda completa de la organización, cuando se presenta algun problema",
+      "section": 10
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 39,
+    "fields": {
+      "description": "Tengo ayuda completa de la organización, cuando se presenta algun problema",
+      "section": 11
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 40,
+    "fields": {
+      "description": "La orgnanizacion intenta que mi trabajo sea lo mas interesante posible",
+      "section": 12
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 41,
+    "fields": {
+      "description": "La organización tiene en cuenta mis opiniones",
+      "section": 13
+    }
+  },
+  {
+    "model": "Formulario.question",
+    "pk": 42,
+    "fields": {
+      "description": "Si la organización obtuviera mayores ganancias consideraria aumentar mi salario",
+      "section": 14
+    }
+  }
+]

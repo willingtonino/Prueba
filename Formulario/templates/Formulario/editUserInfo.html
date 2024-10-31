@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ADAP - Edit User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="icon" href="">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'Inicio_sesion/css/registeruser.css' %}">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #43A941;
+            border-color: #43A941;
+        }
+        .btn-primary:hover {
+            background-color: #388837;
+            border-color: #388837;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h2 class="text-center mb-4">Edit Profile</h2>
+        <form method="POST" action="{% url 'Formulario:editUserProfileView' %}">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3 text-start">
+                        <label for="first_name" class="form-label">Names</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user_info.first_name }}" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="last_name" class="form-label">Surnames</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user_info.last_name }}" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="identification" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="identification" name="identification" value="{{ user_info.identification }}" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select id="gender" class="form-select" name="gender" required>
+                            <option value="" disabled>Select your gender</option>
+                            <option value="Male" {% if user_info.gender == "Male" %}selected{% endif %}>Male</option>
+                            <option value="Female" {% if user_info.gender == "Female" %}selected{% endif %}>Female</option>
+                            <option value="Other" {% if user_info.gender == "Other" %}selected{% endif %}>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="nationality" class="form-label">Nationality</label>
+                        <select id="nationality" class="form-select" name="nationality" required>
+                            <option value="" disabled>Select your nationality</option>
+                            <option value="Afghan" {% if user_info.nationality == "Afghan" %}selected{% endif %}>Afghan</option>
+                            <option value="Albanian" {% if user_info.nationality == "Albanian" %}selected{% endif %}>Albanian</option>
+                            <option value="Algerian" {% if user_info.nationality == "Algerian" %}selected{% endif %}>Algerian</option>
+                            <option value="American" {% if user_info.nationality == "American" %}selected{% endif %}>American</option>
+                            <option value="Argentine" {% if user_info.nationality == "Argentine" %}selected{% endif %}>Argentine</option>
+                            <option value="Australian" {% if user_info.nationality == "Australian" %}selected{% endif %}>Australian</option>
+                            <option value="Austrian" {% if user_info.nationality == "Austrian" %}selected{% endif %}>Austrian</option>
+                            <option value="Belgian" {% if user_info.nationality == "Belgian" %}selected{% endif %}>Belgian</option>
+                            <option value="Beninese" {% if user_info.nationality == "Beninese" %}selected{% endif %}>Beninese</option>
+                            <option value="Bolivian" {% if user_info.nationality == "Bolivian" %}selected{% endif %}>Bolivian</option>
+                            <option value="Botswanian" {% if user_info.nationality == "Botswanian" %}selected{% endif %}>Botswanian</option>
+                            <option value="Brazilian" {% if user_info.nationality == "Brazilian" %}selected{% endif %}>Brazilian</option>
+                            <option value="British" {% if user_info.nationality == "British" %}selected{% endif %}>British</option>
+                            <option value="Cameroonian" {% if user_info.nationality == "Cameroonian" %}selected{% endif %}>Cameroonian</option>
+                            <option value="Canadian" {% if user_info.nationality == "Canadian" %}selected{% endif %}>Canadian</option>
+                            <option value="Chilean" {% if user_info.nationality == "Chilean" %}selected{% endif %}>Chilean</option>
+                            <option value="Chinese" {% if user_info.nationality == "Chinese" %}selected{% endif %}>Chinese</option>
+                            <option value="Colombian" {% if user_info.nationality == "Colombian" %}selected{% endif %}>Colombian</option>
+                            <option value="Congolese" {% if user_info.nationality == "Congolese" %}selected{% endif %}>Congolese</option>
+                            <option value="Costa Rican" {% if user_info.nationality == "Costa Rican" %}selected{% endif %}>Costa Rican</option>
+                            <option value="Croatian" {% if user_info.nationality == "Croatian" %}selected{% endif %}>Croatian</option>
+                            <option value="Cuban" {% if user_info.nationality == "Cuban" %}selected{% endif %}>Cuban</option>
+                            <option value="Czech" {% if user_info.nationality == "Czech" %}selected{% endif %}>Czech</option>
+                            <option value="Danish" {% if user_info.nationality == "Danish" %}selected{% endif %}>Danish</option>
+                            <option value="Dutch" {% if user_info.nationality == "Dutch" %}selected{% endif %}>Dutch</option>
+                            <option value="Ecuadorian" {% if user_info.nationality == "Ecuadorian" %}selected{% endif %}>Ecuadorian</option>
+                            <option value="Egyptian" {% if user_info.nationality == "Egyptian" %}selected{% endif %}>Egyptian</option>
+                            <option value="Ethiopian" {% if user_info.nationality == "Ethiopian" %}selected{% endif %}>Ethiopian</option>
+                            <option value="Finnish" {% if user_info.nationality == "Finnish" %}selected{% endif %}>Finnish</option>
+                            <option value="French" {% if user_info.nationality == "French" %}selected{% endif %}>French</option>
+                            <option value="German" {% if user_info.nationality == "German" %}selected{% endif %}>German</option>
+                            <option value="Greek" {% if user_info.nationality == "Greek" %}selected{% endif %}>Greek</option>
+                            <option value="Guyanese" {% if user_info.nationality == "Guyanese" %}selected{% endif %}>Guyanese</option>
+                            <option value="Honduran" {% if user_info.nationality == "Honduran" %}selected{% endif %}>Honduran</option>
+                            <option value="Hungarian" {% if user_info.nationality == "Hungarian" %}selected{% endif %}>Hungarian</option>
+                            <option value="Icelandic" {% if user_info.nationality == "Icelandic" %}selected{% endif %}>Icelandic</option>
+                            <option value="Indian" {% if user_info.nationality == "Indian" %}selected{% endif %}>Indian</option>
+                            <option value="Iranian" {% if user_info.nationality == "Iranian" %}selected{% endif %}>Iranian</option>
+                            <option value="Iraqi" {% if user_info.nationality == "Iraqi" %}selected{% endif %}>Iraqi</option>
+                            <option value="Irish" {% if user_info.nationality == "Irish" %}selected{% endif %}>Irish</option>
+                            <option value="Israeli" {% if user_info.nationality == "Israeli" %}selected{% endif %}>Israeli</option>
+                            <option value="Italian" {% if user_info.nationality == "Italian" %}selected{% endif %}>Italian</option>
+                            <option value="Jamaican" {% if user_info.nationality == "Jamaican" %}selected{% endif %}>Jamaican</option>
+                            <option value="Japanese" {% if user_info.nationality == "Japanese" %}selected{% endif %}>Japanese</option>
+                            <option value="Kenian" {% if user_info.nationality == "Kenian" %}selected{% endif %}>Kenian</option>
+                            <option value="Latvian" {% if user_info.nationality == "Latvian" %}selected{% endif %}>Latvian</option>
+                            <option value="Lebanese" {% if user_info.nationality == "Lebanese" %}selected{% endif %}>Lebanese</option>
+                            <option value="Lithuanian" {% if user_info.nationality == "Lithuanian" %}selected{% endif %}>Lithuanian</option>
+                            <option value="Macedonian" {% if user_info.nationality == "Macedonian" %}selected{% endif %}>Macedonian</option>
+                            <option value="Maltese" {% if user_info.nationality == "Maltese" %}selected{% endif %}>Maltese</option>
+                            <option value="Mexican" {% if user_info.nationality == "Mexican" %}selected{% endif %}>Mexican</option>
+                            <option value="Monegasque" {% if user_info.nationality == "Monegasque" %}selected{% endif %}>Monegasque</option>
+                            <option value="Mongolian" {% if user_info.nationality == "Mongolian" %}selected{% endif %}>Mongolian</option>
+                            <option value="Moroccan" {% if user_info.nationality == "Moroccan" %}selected{% endif %}>Moroccan</option>
+                            <option value="Nepali" {% if user_info.nationality == "Nepali" %}selected{% endif %}>Nepali</option>
+                            <option value="New Zealand" {% if user_info.nationality == "New Zealand" %}selected{% endif %}>New Zealand</option>
+                            <option value="Nicaraguan" {% if user_info.nationality == "Nicaraguan" %}selected{% endif %}>Nicaraguan</option>
+                            <option value="Nigerian" {% if user_info.nationality == "Nigerian" %}selected{% endif %}>Nigerian</option>
+                            <option value="North Korean" {% if user_info.nationality == "North Korean" %}selected{% endif %}>North Korean</option>
+                            <option value="Norwegian" {% if user_info.nationality == "Norwegian" %}selected{% endif %}>Norwegian</option>
+                            <option value="Panamanian" {% if user_info.nationality == "Panamanian" %}selected{% endif %}>Panamanian</option>
+                            <option value="Paraguayan" {% if user_info.nationality == "Paraguayan" %}selected{% endif %}>Paraguayan</option>
+                            <option value="Peruvian" {% if user_info.nationality == "Peruvian" %}selected{% endif %}>Peruvian</option>
+                            <option value="Philippine" {% if user_info.nationality == "Philippine" %}selected{% endif %}>Philippine</option>
+                            <option value="Polish" {% if user_info.nationality == "Polish" %}selected{% endif %}>Polish</option>
+                            <option value="Portuguese" {% if user_info.nationality == "Portuguese" %}selected{% endif %}>Portuguese</option>
+                            <option value="Puerto Rican" {% if user_info.nationality == "Puerto Rican" %}selected{% endif %}>Puerto Rican</option>
+                            <option value="Romanian" {% if user_info.nationality == "Romanian" %}selected{% endif %}>Romanian</option>
+                            <option value="Russian" {% if user_info.nationality == "Russian" %}selected{% endif %}>Russian</option>
+                            <option value="Salvadoran" {% if user_info.nationality == "Salvadoran" %}selected{% endif %}>Salvadoran</option>
+                            <option value="Serbian" {% if user_info.nationality == "Serbian" %}selected{% endif %}>Serbian</option>
+                            <option value="Singaporean" {% if user_info.nationality == "Singaporean" %}selected{% endif %}>Singaporean</option>
+                            <option value="Slovakian" {% if user_info.nationality == "Slovakian" %}selected{% endif %}>Slovakian</option>
+                            <option value="Slovene" {% if user_info.nationality == "Slovene" %}selected{% endif %}>Slovene</option>
+                            <option value="South African" {% if user_info.nationality == "South African" %}selected{% endif %}>South African</option>
+                            <option value="South Korean" {% if user_info.nationality == "South Korean" %}selected{% endif %}>South Korean</option>
+                            <option value="Spanish" {% if user_info.nationality == "Spanish" %}selected{% endif %}>Spanish</option>
+                            <option value="Surinamese" {% if user_info.nationality == "Surinamese" %}selected{% endif %}>Surinamese</option>
+                            <option value="Swedish" {% if user_info.nationality == "Swedish" %}selected{% endif %}>Swedish</option>
+                            <option value="Swiss" {% if user_info.nationality == "Swiss" %}selected{% endif %}>Swiss</option>
+                            <option value="Syrian" {% if user_info.nationality == "Syrian" %}selected{% endif %}>Syrian</option>
+                            <option value="Thai" {% if user_info.nationality == "Thai" %}selected{% endif %}>Thai</option>
+                            <option value="Turkish" {% if user_info.nationality == "Turkish" %}selected{% endif %}>Turkish</option>
+                            <option value="Ukrainian" {% if user_info.nationality == "Ukrainian" %}selected{% endif %}>Ukrainian</option>
+                            <option value="Uruguayan" {% if user_info.nationality == "Uruguayan" %}selected{% endif %}>Uruguayan</option>
+                            <option value="Venezuelan" {% if user_info.nationality == "Venezuelan" %}selected{% endif %}>Venezuelan</option>
+                            <option value="Vietnamese" {% if user_info.nationality == "Vietnamese" %}selected{% endif %}>Vietnamese</option>
+                            <option value="Yemeni" {% if user_info.nationality == "Yemeni" %}selected{% endif %}>Yemeni</option>
+                            <option value="Zimbabwean" {% if user_info.nationality == "Zimbabwean" %}selected{% endif %}>Zimbabwean</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3 text-start">
+                        <label for="country" class="form-label">Country of Residence</label>
+                        <select id="country" class="form-select" name="country" required>
+                            <option value="" disabled>Select your country of residence</option>
+                            <option value="Afghanistan" {% if user_info.country == "Afghanistan" %}selected{% endif %}>Afghanistan</option>
+                            <option value="Albania" {% if user_info.nationality == "Albania" %}selected{% endif %}>Albania</option>
+                            <option value="Germany" {% if user_info.nationality == "Germany" %}selected{% endif %}>Germany</option>
+                            <option value="Algeria" {% if user_info.nationality == "Algeria" %}selected{% endif %}>Algeria</option>
+                            <option value="Argentina" {% if user_info.nationality == "Argentina" %}selected{% endif %}>Argentina</option>
+                            <option value="Australia" {% if user_info.nationality == "Australia" %}selected{% endif %}>Australia</option>
+                            <option value="Austria" {% if user_info.nationality == "Austria" %}selected{% endif %}>Austria</option>
+                            <option value="Belgium" {% if user_info.nationality == "Belgium" %}selected{% endif %}>Belgium</option>
+                            <option value="Benin" {% if user_info.nationality == "Benin" %}selected{% endif %}>Benin</option>
+                            <option value="Bolivia" {% if user_info.nationality == "Bolivia" %}selected{% endif %}>Bolivia</option>
+                            <option value="Botswana" {% if user_info.nationality == "Botswana" %}selected{% endif %}>Botswana</option>
+                            <option value="Brazil" {% if user_info.nationality == "Brazil" %}selected{% endif %}>Brazil</option>
+                            <option value="United Kingdom" {% if user_info.nationality == "United Kingdom" %}selected{% endif %}>United Kingdom</option>
+                            <option value="Cameroon" {% if user_info.nationality == "Cameroon" %}selected{% endif %}>Cameroon</option>
+                            <option value="Canada" {% if user_info.nationality == "Canada" %}selected{% endif %}>Canada</option>
+                            <option value="Czech Republic" {% if user_info.nationality == "Czech Republic" %}selected{% endif %}>Czech Republic</option>
+                            <option value="Chile" {% if user_info.nationality == "Chile" %}selected{% endif %}>Chile</option>
+                            <option value="China" {% if user_info.nationality == "China" %}selected{% endif %}>China</option>
+                            <option value="Colombia" {% if user_info.nationality == "Colombia" %}selected{% endif %}>Colombia</option>
+                            <option value="Congo" {% if user_info.nationality == "Congo" %}selected{% endif %}>Congo</option>
+                            <option value="Costa Rica" {% if user_info.nationality == "Costa Rica" %}selected{% endif %}>Costa Rica</option>
+                            <option value="Croatia" {% if user_info.nationality == "Croatia" %}selected{% endif %}>Croatia</option>
+                            <option value="Cuba" {% if user_info.nationality == "Cuba" %}selected{% endif %}>Cuba</option>
+                            <option value="Denmark" {% if user_info.nationality == "Denmark" %}selected{% endif %}>Denmark</option>
+                            <option value="Ecuador" {% if user_info.nationality == "Ecuador" %}selected{% endif %}>Ecuador</option>
+                            <option value="Egypt" {% if user_info.nationality == "Egypt" %}selected{% endif %}>Egypt</option>
+                            <option value="Spain" {% if user_info.nationality == "Spain" %}selected{% endif %}>Spain</option>
+                            <option value="United States" {% if user_info.nationality == "United States" %}selected{% endif %}>United States</option>
+                            <option value="Slovakia" {% if user_info.nationality == "Slovakia" %}selected{% endif %}>Slovakia</option>
+                            <option value="Slovenia" {% if user_info.nationality == "Slovenia" %}selected{% endif %}>Slovenia</option>
+                            <option value="Ethiopia" {% if user_info.nationality == "Ethiopia" %}selected{% endif %}>Ethiopia</option>
+                            <option value="Philippines" {% if user_info.nationality == "Philippines" %}selected{% endif %}>Philippines</option>
+                            <option value="Finland" {% if user_info.nationality == "Finland" %}selected{% endif %}>Finland</option>
+                            <option value="France" {% if user_info.nationality == "France" %}selected{% endif %}>France</option>
+                            <option value="Greece" {% if user_info.nationality == "Greece" %}selected{% endif %}>Greece</option>
+                            <option value="Guyana" {% if user_info.nationality == "Guyana" %}selected{% endif %}>Guyana</option>
+                            <option value="Netherlands" {% if user_info.nationality == "Netherlands" %}selected{% endif %}>Netherlands</option>
+                            <option value="Honduras" {% if user_info.nationality == "Honduras" %}selected{% endif %}>Honduras</option>
+                            <option value="Hungary" {% if user_info.nationality == "Hungary" %}selected{% endif %}>Hungary</option>
+                            <option value="India" {% if user_info.nationality == "India" %}selected{% endif %}>India</option>
+                            <option value="Iran" {% if user_info.nationality == "Iran" %}selected{% endif %}>Iran</option>
+                            <option value="Iraq" {% if user_info.nationality == "Iraq" %}selected{% endif %}>Iraq</option>
+                            <option value="Ireland" {% if user_info.nationality == "Ireland" %}selected{% endif %}>Ireland</option>
+                            <option value="Iceland" {% if user_info.nationality == "Iceland" %}selected{% endif %}>Iceland</option>
+                            <option value="Israel" {% if user_info.nationality == "Israel" %}selected{% endif %}>Israel</option>
+                            <option value="Italy" {% if user_info.nationality == "Italy" %}selected{% endif %}>Italy</option>
+                            <option value="Jamaica" {% if user_info.nationality == "Jamaica" %}selected{% endif %}>Jamaica</option>
+                            <option value="Japan" {% if user_info.nationality == "Japan" %}selected{% endif %}>Japan</option>
+                            <option value="Kenya" {% if user_info.nationality == "Kenya" %}selected{% endif %}>Kenya</option>
+                            <option value="Latvia" {% if user_info.nationality == "Latvia" %}selected{% endif %}>Latvia</option>
+                            <option value="Lebanon" {% if user_info.nationality == "Lebanon" %}selected{% endif %}>Lebanon</option>
+                            <option value="Lithuania" {% if user_info.nationality == "Lithuania" %}selected{% endif %}>Lithuania</option>
+                            <option value="Macedonia" {% if user_info.nationality == "Macedonia" %}selected{% endif %}>Macedonia</option>
+                            <option value="Malta" {% if user_info.nationality == "Malta" %}selected{% endif %}>Malta</option>
+                            <option value="Morocco" {% if user_info.nationality == "Morocco" %}selected{% endif %}>Morocco</option>
+                            <option value="Mexico" {% if user_info.nationality == "Mexico" %}selected{% endif %}>Mexico</option>
+                            <option value="Monaco" {% if user_info.nationality == "Monaco" %}selected{% endif %}>Monaco</option>
+                            <option value="Mongolia" {% if user_info.nationality == "Mongolia" %}selected{% endif %}>Mongolia</option>
+                            <option value="Nepal" {% if user_info.nationality == "Nepal" %}selected{% endif %}>Nepal</option>
+                            <option value="New Zealand" {% if user_info.nationality == "New Zealand" %}selected{% endif %}>New Zealand</option>
+                            <option value="Nicaragua" {% if user_info.nationality == "Nicaragua" %}selected{% endif %}>Nicaragua</option>
+                            <option value="Nigeria" {% if user_info.nationality == "Nigeria" %}selected{% endif %}>Nigeria</option>
+                            <option value="North Korea" {% if user_info.nationality == "North Korea" %}selected{% endif %}>North Korea</option>
+                            <option value="Norway" {% if user_info.nationality == "Norway" %}selected{% endif %}>Norway</option>
+                            <option value="Panama" {% if user_info.nationality == "Panama" %}selected{% endif %}>Panama</option>
+                            <option value="Paraguay" {% if user_info.nationality == "Paraguay" %}selected{% endif %}>Paraguay</option>
+                            <option value="Peru" {% if user_info.nationality == "Peru" %}selected{% endif %}>Peru</option>
+                            <option value="Poland" {% if user_info.nationality == "Poland" %}selected{% endif %}>Poland</option>
+                            <option value="Portugal" {% if user_info.nationality == "Portugal" %}selected{% endif %}>Portugal</option>
+                            <option value="Puerto Rico" {% if user_info.nationality == "Puerto Rico" %}selected{% endif %}>Puerto Rico</option>
+                            <option value="Romania" {% if user_info.nationality == "Romania" %}selected{% endif %}>Romania</option>
+                            <option value="Russia" {% if user_info.nationality == "Russia" %}selected{% endif %}>Russia</option>
+                            <option value="El Salvador" {% if user_info.nationality == "El Salvador" %}selected{% endif %}>El Salvador</option>
+                            <option value="Serbia" {% if user_info.nationality == "Serbia" %}selected{% endif %}>Serbia</option>
+                            <option value="Singapore" {% if user_info.nationality == "Singapore" %}selected{% endif %}>Singapore</option>
+                            <option value="Syria" {% if user_info.nationality == "Syria" %}selected{% endif %}>Syria</option>
+                            <option value="South Africa" {% if user_info.nationality == "South Africa" %}selected{% endif %}>South Africa</option>
+                            <option value="Sweden" {% if user_info.nationality == "Sweden" %}selected{% endif %}>Sweden</option>
+                            <option value="Switzerland" {% if user_info.nationality == "Switzerland" %}selected{% endif %}>Switzerland</option>
+                            <option value="South Korea" {% if user_info.nationality == "South Korea" %}selected{% endif %}>South Korea</option>
+                            <option value="Suriname" {% if user_info.nationality == "Suriname" %}selected{% endif %}>Suriname</option>
+                            <option value="Thailand" {% if user_info.nationality == "Thailand" %}selected{% endif %}>Thailand</option>
+                            <option value="Turkey" {% if user_info.nationality == "Turkey" %}selected{% endif %}>Turkey</option>
+                            <option value="Ukraine" {% if user_info.nationality == "Ukraine" %}selected{% endif %}>Ukraine</option>
+                            <option value="Uruguay" {% if user_info.nationality == "Uruguay" %}selected{% endif %}>Uruguay</option>
+                            <option value="Venezuela" {% if user_info.nationality == "Venezuela" %}selected{% endif %}>Venezuela</option>
+                            <option value="Vietnam" {% if user_info.nationality == "Vietnam" %}selected{% endif %}>Vietnam</option>
+                            <option value="Yemen" {% if user_info.nationality == "Yemen" %}selected{% endif %}>Yemen</option>
+                            <option value="Zimbabwe" {% if user_info.nationality == "Zimbabwe" %}selected{% endif %}>Zimbabwe</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="birthday" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="birthday" name="birthday" value="{{ user_info.birthday }}" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="position" class="form-label">Position in the company</label>
+                        <select id="position" class="form-select" name="position" required>
+                            <option value="" disabled>Select your position</option>
+                            <option value="CEO" {% if user_info.position == "CEO" %}selected{% endif %}>CEO (Chief Executive Officer)</option>
+                            <option value="COO" {% if user_info.position == "COO" %}selected{% endif %}>COO (Chief Operating Officer)</option>
+                            <option value="CFO" {% if user_info.position == "CFO" %}selected{% endif %}>CFO (Chief Financial Officer)</option>
+                            <option value="CTO" {% if user_info.position == "CTO" %}selected{% endif %}>CTO (Chief Technology Officer)</option>
+                            <option value="CMO" {% if user_info.position == "CMO" %}selected{% endif %}>CMO (Chief Marketing Officer)</option>
+                            <option value="CIO" {% if user_info.position == "CIO" %}selected{% endif %}>CIO (Chief Information Officer)</option>
+                            <option value="Director" {% if user_info.position == "Director" %}selected{% endif %}>Director</option>
+                            <option value="Manager" {% if user_info.position == "Manager" %}selected{% endif %}>Manager</option>
+                            <option value="Department Head" {% if user_info.position == "Department Head" %}selected{% endif %}>Department Head</option>
+                            <option value="Supervisor" {% if user_info.position == "Supervisor" %}selected{% endif %}>Supervisor</option>
+                            <option value="Analyst" {% if user_info.position == "Analyst" %}selected{% endif %}>Analyst</option>
+                            <option value="Assistant" {% if user_info.position == "Assistant" %}selected{% endif %}>Assistant</option>
+                            <option value="Specialist" {% if user_info.position == "Specialist" %}selected{% endif %}>Specialist</option>
+                            <option value="Consultant" {% if user_info.position == "Consultant" %}selected{% endif %}>Consultant</option>
+                            <option value="Engineer" {% if user_info.position == "Engineer" %}selected{% endif %}>Engineer</option>
+                            <option value="Technician" {% if user_info.position == "Technician" %}selected{% endif %}>Technician</option>
+                            <option value="Operator" {% if user_info.position == "Operator" %}selected{% endif %}>Operator</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <input class="form-check-control" type="checkbox" id="isEntrepreneurCheckbox" name="isEntrepreneur" value="True" {% if user_info.isEntrepreneur %}checked{% endif %}>
+                        <label class="form-check-label" for="isEntrepreneurCheckbox">Are you an entrepreneur?</label>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="entrepreneurship" class="form-label">Entrepreneurship</label>
+                        <input type="text" class="form-control" id="entrepreneurship" name="entrepreneurship" value="{{ user_info.entrepreneurship }}" {% if not user_info.isEntrepreneur %}disabled{% endif %}>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="{{ user_info.phone }}" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Update Profile</button>
+        </form>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var isEntrepreneurCheckbox = document.getElementById('isEntrepreneurCheckbox');
+            var entrepreneurshipField = document.getElementById('entrepreneurship');
+    
+            // Disable the entrepreneurship field if the checkbox is not checked
+            entrepreneurshipField.disabled = !isEntrepreneurCheckbox.checked;
+    
+            // Add event listener to the checkbox
+            isEntrepreneurCheckbox.addEventListener('change', function() {
+                entrepreneurshipField.disabled = !this.checked;
+            });
+        });
+    </script>
+</body>
+</html>

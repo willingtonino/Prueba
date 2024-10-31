@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/verificacion.css">
+    <title>Two-Step Authentication</title>
+</head>
+<body>
+    <div class="container">
+        <h1 data-section="verificacion" data-value="AUT">Two-Step Authentication</h1>
+        <form action="IniciarSesion.html" id="two-step-form">
+            <label for="security-code" data-section="verificacion" data-value="security-code-label" >Enter security code sent to your email:</label>
+            <input type="text" id="security-code" name="security-code" required>
+
+            <label for="password" data-section="verificacion" data-value="password-label" >Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" data-section="verificacion" data-value="terms-label">I accept the terms and conditions</label>
+
+            <button type="submit" data-section="verificacion" data-value="submit-btnAUT">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

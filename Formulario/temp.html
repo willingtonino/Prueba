@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="emailForm" action="tu_url_de_procesamiento" method="POST">
+        <label for="emails">Lista de Correos:</label><br>
+        <input type="email" id="emails" name="emails[]" multiple><br>
+        <input type="submit" value="Enviar">
+      </form>
+      <button id="getEmailsButton">Obtener Correos</button>
+      <div id="emailList"></div>
+      
+      
+      <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+      
+          // Obtiene el valor del campo de correos electrónicos
+          var emailInput = document.getElementById('emails');
+          var emails = emailInput.value.split(',');
+      
+          // Crea una lista HTML para mostrar los correos electrónicos
+          var emailList = document.getElementById('emailList');
+          var existingListItems = emailList.getElementsByTagName('li'); // Obtiene los elementos de la lista existente
+      
+          // Agrega los nuevos correos electrónicos a la lista existente
+          emails.forEach(function(email) {
+            var trimmedEmail = email.trim();
+            if (trimmedEmail !== '') { // Verifica si el correo electrónico no está vacío
+              var newListItem = document.createElement('li'); // Crea un nuevo elemento de lista
+              newListItem.textContent = trimmedEmail; // Establece el contenido del elemento
+              emailList.appendChild(newListItem); // Agrega el nuevo elemento a la lista
+            }
+          });
+      
+          // Limpia el campo de correos electrónicos después de agregar la lista
+          emailInput.value = '';
+        });
+      
+        document.getElementById('getEmailsButton').addEventListener('click', function() {
+          var emailList = document.getElementById('emailList');
+          var emailItems = emailList.getElementsByTagName('li');
+          var emailsArray = [];
+      
+          for (var i = 0; i < emailItems.length; i++) {
+            emailsArray.push(emailItems[i].textContent);
+          }
+      
+          console.log(emailsArray); // Puedes utilizar esta lista de correos en tu backend
+        });
+      </script>
+      
+</body>
+</html>
