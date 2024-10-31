@@ -1,0 +1,317 @@
+[
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 1,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "1",
+            "resultado_usu": "4.17"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 2,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "2",
+            "resultado_usu": "3.64"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 3,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "3",
+            "resultado_usu": "3.90"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 4,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "4",
+            "resultado_usu": "4.15"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 5,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "5",
+            "resultado_usu": "4.09"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 6,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "6",
+            "resultado_usu": "4.16"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 7,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "7",
+            "resultado_usu": "4.13"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 8,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "8",
+            "resultado_usu": "3.90"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 9,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "9",
+            "resultado_usu": "3.88"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 10,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "10",
+            "resultado_usu": "3.92"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 11,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "11",
+            "resultado_usu": "3.95"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 12,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "12",
+            "resultado_usu": "3.74"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 13,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "13",
+            "resultado_usu": "4.0"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 14,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "14",
+            "resultado_usu": "3.53"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosUsuario",
+        "pk": 15,
+        "fields": {
+            "id_empleado": "1",
+            "id_empresa_empleado": "1",
+            "id_formulario": "1",
+            "evaluado_usu": "15",
+            "resultado_usu": "3.86"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 1,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "1",
+            "resultado_empre": "4.17"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 2,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "2",
+            "resultado_empre": "3.64"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 3,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "3",
+            "resultado_empre": "3.90"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 4,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "4",
+            "resultado_empre": "4.15"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 5,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "5",
+            "resultado_empre": "4.09"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 6,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "6",
+            "resultado_empre": "4.16"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 7,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "7",
+            "resultado_empre": "4.13"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 8,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "8",
+            "resultado_empre": "3.90"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 9,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "9",
+            "resultado_empre": "3.88"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 10,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "10",
+            "resultado_empre": "3.92"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 11,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "11",
+            "resultado_empre": "3.95"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 12,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "12",
+            "resultado_empre": "3.74"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 13,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "13",
+            "resultado_empre": "4.0"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 14,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "14",
+            "resultado_empre": "3.53"
+        }
+    },
+    {
+        "model": "Resultados.ResultadosEmpresa",
+        "pk": 15,
+        "fields": {
+            "id_empresa": "1",
+            "id_formulario_nombre": "1",
+            "evaluado_empre": "15",
+            "resultado_empre": "3.86"
+        }
+    }
+]
